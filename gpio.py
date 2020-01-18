@@ -11,7 +11,3 @@ def turn_on(GPIO_NO):
 def turn_off(GPIO_NO):
 	GPIO.setup(GPIO_NO, GPIO.OUT)
 	GPIO.output(GPIO_NO,False)
-
-turn_on(23)
-time.sleep(1)
-turn_off(23)

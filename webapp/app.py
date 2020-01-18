@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 # from led import blinkLed
 from uno import handle_signals
-from thread import start_new_thread
+from _thread import start_new_thread
 from readSerial import read
 
 
@@ -20,3 +20,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+ 

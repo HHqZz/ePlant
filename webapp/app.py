@@ -1,6 +1,11 @@
 from flask import Flask, render_template
 # from led import blinkLed
 from uno import handle_signals
+from thread import start_new_thread
+from readSerial import read
+
+
+start_new_thread(read)
 
 app = Flask(__name__)
 

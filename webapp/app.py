@@ -5,7 +5,7 @@ from _thread import start_new_thread
 from readSerial import read
 
 
-start_new_thread(read)
+start_new_thread(read,())
 
 app = Flask(__name__)
 

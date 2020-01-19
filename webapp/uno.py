@@ -10,14 +10,14 @@ def handle_signals():
     check_temperature()
 
 def check_water():
-    water_level = 5
-    print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n')
-    if water_level>const.WATER_TH:
-        print('yeaah\n')
+    f = open("water.txt", "r")
+    water_level = f.read()
+    if water_level<const.WATER_TH:
         en_gpio(3,const.GPIO_PUMP) #Should be calculated depending on the uno value
 
 def check_temperature():
-    temperature_level = 5
+    f = open("temperature.txt", "r")
+    temperature_level = f.read()
     if temperature_level<const.TEMPERATURE_TH:
         en_gpio(3,const.GPIO_FAN) #Should be calculated depending on the uno value
 

@@ -14,10 +14,9 @@ def index():
     
     return render_template('index.html')
 
-@app.route('/SomeFunction')
-def SomeFunction():
-    print('In SomeFunction')
-    return "Nothing"
+@app.route('/your_flask_funtion')
+def get_ses():
+ 	print("SAKJNSDKJASDLJNAKJSNDKJSADNAKJSND")
 
 # @app.route('/led')
 #def led():

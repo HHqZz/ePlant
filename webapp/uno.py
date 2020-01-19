@@ -35,7 +35,7 @@ def en_gpio(t, gpio_port):
 def anepasrefairechezvous():
 	while(1):
 		handle_signals()
-		time.sleep(4)
+		time.sleep(10)
 
 #def read_uno():
    # serial.read()

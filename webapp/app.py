@@ -7,6 +7,7 @@ from readSerial import read
 import gpio as gpio
 import json
 import context
+import uno
  
 
 
@@ -29,6 +30,8 @@ def light():
 
 @app.route('/ntm')
 def infos():
+    f = open("humidity.txt", "r")
+    context.humidity = float(f.read())
     #json qui renvoie les infos sur light fan humidite ground wet
     return  {'fan':context.fan,'pump':context.pump,'light':context.light,'humidity':context.humidity}
 

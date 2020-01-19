@@ -3,6 +3,8 @@ from flask import Flask, render_template
 from uno import start
 from _thread import start_new_thread
 from readSerial import read
+import gpio as gpio
+ 
 
 
 start_new_thread(read,())
@@ -16,7 +18,9 @@ def index():
 
 @app.route('/your_flask_funtion')
 def get_ses():
- 	print("SAKJNSDKJASDLJNAKJSNDKJSADNAKJSND")
+ 	gpio.turn_on(23)
+ 	return render_template('index.html')
+
 
 # @app.route('/led')
 #def led():

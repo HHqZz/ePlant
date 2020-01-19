@@ -23,6 +23,7 @@ Marco
 """
 
 import bluetooth
+import os
 print "Bluetooth Terminal with Voice"
 print "Follow instructions on app to connect"
 print "Waiting for connection..." 
@@ -39,6 +40,8 @@ while True:
    data = client_sock.recv(1024)
    print "received: %s" % data
    client_sock.send(data);
+   if (data == "start"):
+       os.system("cd webapp && python3 app.py")
    if (data == "exit"):
        client_sock.send("Stopped by android app");
        print ("Exit")

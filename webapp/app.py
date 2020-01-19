@@ -30,10 +30,10 @@ def light():
 
 @app.route('/ntm')
 def infos():
-    f = open("humidity.txt", "r")
+    f = open("humidite.txt", "r")
     context.humidity = float(f.read())
     #json qui renvoie les infos sur light fan humidite ground wet
-    return  {'fan':context.fan,'pump':context.pump,'light':context.light,'humidity':context.humidity}
+    return  jsonify({'fan':context.fan,'pump':context.pump,'light':context.light,'humidity':context.humidity})
 
 #fan switch
 @app.route('/fan')

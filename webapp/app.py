@@ -28,7 +28,7 @@ def light():
     return render_template('index.html')
 
 
-@app.route('/ntm')
+@app.route('/info')
 def infos():
     f = open("humidite.txt", "r")
     context.humidity = float(f.read())

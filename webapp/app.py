@@ -14,6 +14,11 @@ def index():
     
     return render_template('index.html')
 
+@app.route('/SomeFunction')
+def SomeFunction():
+    print('In SomeFunction')
+    return "Nothing"
+
 # @app.route('/led')
 #def led():
 #     blinkLed()

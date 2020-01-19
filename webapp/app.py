@@ -1,17 +1,17 @@
 from flask import Flask, render_template
 # from led import blinkLed
-from uno import handle_signals
+from uno import start
 from _thread import start_new_thread
 from readSerial import read
 
 
 start_new_thread(read,())
-
+start()
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    handle_signals()
+    
     return render_template('index.html')
 
 # @app.route('/led')
